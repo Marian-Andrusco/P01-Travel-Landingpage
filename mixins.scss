@@ -1,0 +1,6 @@
+@mixin homeElementsStyle($fs, $fw, $mb) {
+  color: $white-color;
+  font-size: $fs;
+  font-weight: $fw;
+  margin-bottom: $mb;
+}

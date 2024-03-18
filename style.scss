@@ -1,0 +1,465 @@
+@import "variables";
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+// Navbar Section
+#navbar {
+  background: $white-color;
+  box-shadow: $shadow;
+  border-radius: 0 0 40px 40px;
+
+  #logo {
+    font-size: 36px;
+    font-weight: 700;
+    color: $black-color;
+    /* text-shadow: 0px 1px 1px $black-color; */
+    margin-bottom: 5px;
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  .navbar-toggler span {
+    color: $primary-color;
+  }
+
+  .navbar-nav {
+    margin-left: 20px;
+  }
+
+  .nav-item .nav-link {
+    font-size: 16px;
+    font-weight: 550;
+    color: $black-color;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.5s ease;
+    &:hover {
+      background: $primary-color;
+      color: $white-color;
+    }
+  }
+
+  form button {
+    background: $primary-color;
+    color: $white-color;
+    border: none;
+  }
+  @media (width < 768px) {
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+// Home Section
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url(./images/timur-garifov-DdIDRN3Fw2A-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .content {
+    padding-top: 200px;
+    text-align: center;
+
+    h5 {
+      @include homeElementsStyle(40px, 500, 5px);
+    }
+
+    h1 {
+      @include homeElementsStyle(72px, 600, 5px);
+
+      .changecontext::after {
+        content: " ";
+        color: $primary-color;
+        animation: changetext 60s infinite linear;
+      }
+
+      @keyframes changetext {
+        0% {
+          content: "France";
+        }
+        10% {
+          content: "Spain";
+        }
+        20% {
+          content: "United States";
+        }
+        30% {
+          content: "China";
+        }
+        40% {
+          content: "India";
+        }
+        50% {
+          content: "Pakistan";
+        }
+        60% {
+          content: "Italy";
+        }
+        70% {
+          content: "Turkey";
+        }
+        80% {
+          content: "Mexico";
+        }
+        90% {
+          content: "Germany";
+        }
+        100% {
+          content: "United Kingdom";
+        }
+      }
+    }
+
+    p {
+      @include homeElementsStyle(16px, 500, 30px);
+    }
+
+    a {
+      padding: 10px;
+      background-color: $white-color;
+      color: $black-color;
+      // letter-spacing: 2px;
+      font-weight: 600;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.5s;
+
+      &:hover {
+        background: $primary-color;
+        color: $white-color;
+      }
+    }
+    @media (width < 576px) {
+      h5 {
+        font-size: 24px;
+      }
+      h1 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  @media (width < 960px) {
+    background-position: 50%;
+    height: 50vh;
+  }
+}
+
+// Book Section
+.book {
+  background: $white-color;
+  padding: 50px;
+
+  .main-text h1 {
+    text-align: center;
+    font-weight: 600;
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  .card {
+    border-radius: 10px;
+    box-shadow: $shadow;
+    border: none;
+  }
+  .row {
+    margin-top: 32px;
+  }
+
+  form {
+    input {
+      padding: 12px;
+      color: $black-color;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      border-radius: 10px;
+      box-shadow: $shadow;
+    }
+    textarea {
+      border: none;
+      border-radius: 10px;
+      resize: none;
+      height: 95px;
+      box-shadow: $shadow;
+    }
+  }
+  .submit {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600px;
+    background: $primary-color;
+    color: $white-color;
+    transition: 0.5s;
+    box-shadow: $shadow;
+
+    &:hover {
+      width: 180px;
+    }
+  }
+  @media (width < 768px) {
+    padding: 0;
+    .main-text h1 {
+      margin-top: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+// Packages Section
+
+.packages {
+  .main-txt h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600px;
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  .card {
+    border-radius: 20px;
+    border: none;
+    box-shadow: $shadow;
+
+    img {
+      border-radius: 20px;
+      height: 600px;
+      @media (width < 1200px) {
+        height: 400px;
+      }
+      @media (width < 992px) {
+        height: 250px;
+      }
+      @media (width < 768px) {
+        height: 600px;
+      }
+      @media (width < 450px) {
+        height: 400px;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .card-body {
+    background-color: transparent;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .checked {
+      color: $primary-color;
+    }
+
+    h6 {
+      font-size: 24px;
+    }
+
+    a {
+      padding: 10px;
+      text-decoration: none;
+      background: $primary-color;
+      color: $white-color;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+  }
+
+  .star i {
+    font-size: 16px;
+  }
+}
+
+// Services Section
+.services {
+  background: $white-color;
+  margin-top: 50px;
+
+  .main-txt h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600px;
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  .card {
+    box-shadow: $shadow;
+    border: none;
+
+    i {
+      font-size: 80px;
+      text-align: center;
+      color: $primary-color;
+      margin-top: 20px;
+    }
+
+    .card-body {
+      text-align: center;
+
+      h3 {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Gallery Section
+.gallery {
+  margin-top: 50px;
+  .main-txt h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600px;
+
+    span {
+      color: $primary-color;
+    }
+  }
+  .card {
+    border-radius: 10px;
+    box-shadow: $shadow;
+    cursor: pointer;
+
+    img {
+      height: 230px;
+      border-radius: 10px;
+      transition: 0.5s;
+      &:hover {
+        transform: scale(1.1);
+      }
+      @media (width < 1200px) {
+        height: 200px;
+      }
+      @media (width < 768px) {
+        height: 230px;
+      }
+    }
+  }
+}
+
+// About Section
+.about {
+  padding: 50px;
+  margin-top: 50px;
+  background: $white-color;
+
+  .main-txt h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600px;
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  .card {
+    border-radius: 10px;
+    border: none;
+    img {
+      border-radius: 10px;
+      box-shadow: $shadow;
+      border: none;
+    }
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+
+  p {
+    font-weight: 500;
+  }
+
+  #about-btn {
+    width: 150px;
+    height: 38px;
+    border: none;
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: $white-color;
+    font-weight: 600;
+    transition: 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      width: 180px;
+    }
+  }
+  @media (width < 768px) {
+    padding: 0;
+  }
+}
+
+// Footer Section
+#footer {
+  width: 100%;
+  text-align: center;
+  background-color: $white-color;
+
+  h1 {
+    font-weight: 600;
+    padding-top: 30px;
+    text-shadow: $shadow;
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  .social-links i {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: $black-color;
+    color: $white-color;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}

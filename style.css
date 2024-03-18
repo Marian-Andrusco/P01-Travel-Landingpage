@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+#navbar {
+  background: #f9f9f9;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+  border-radius: 0 0 40px 40px;
+}
+#navbar #logo {
+  font-size: 36px;
+  font-weight: 700;
+  color: black;
+  /* text-shadow: 0px 1px 1px $black-color; */
+  margin-bottom: 5px;
+}
+#navbar #logo span {
+  color: #ffa500;
+}
+#navbar .navbar-toggler span {
+  color: #ffa500;
+}
+#navbar .navbar-nav {
+  margin-left: 20px;
+}
+#navbar .nav-item .nav-link {
+  font-size: 16px;
+  font-weight: 550;
+  color: black;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: 0.5s ease;
+}
+#navbar .nav-item .nav-link:hover {
+  background: #ffa500;
+  color: #f9f9f9;
+}
+#navbar form button {
+  background: #ffa500;
+  color: #f9f9f9;
+  border: none;
+}
+@media (width < 768px) {
+  #navbar {
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(./images/timur-garifov-DdIDRN3Fw2A-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home .content {
+  padding-top: 200px;
+  text-align: center;
+}
+.home .content h5 {
+  color: #f9f9f9;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.home .content h1 {
+  color: #f9f9f9;
+  font-size: 72px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.home .content h1 .changecontext::after {
+  content: " ";
+  color: #ffa500;
+  animation: changetext 60s infinite linear;
+}
+@keyframes changetext {
+  0% {
+    content: "France";
+  }
+  10% {
+    content: "Spain";
+  }
+  20% {
+    content: "United States";
+  }
+  30% {
+    content: "China";
+  }
+  40% {
+    content: "India";
+  }
+  50% {
+    content: "Pakistan";
+  }
+  60% {
+    content: "Italy";
+  }
+  70% {
+    content: "Turkey";
+  }
+  80% {
+    content: "Mexico";
+  }
+  90% {
+    content: "Germany";
+  }
+  100% {
+    content: "United Kingdom";
+  }
+}
+.home .content p {
+  color: #f9f9f9;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.home .content a {
+  padding: 10px;
+  background-color: #f9f9f9;
+  color: black;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.home .content a:hover {
+  background: #ffa500;
+  color: #f9f9f9;
+}
+@media (width < 576px) {
+  .home .content h5 {
+    font-size: 24px;
+  }
+  .home .content h1 {
+    font-size: 40px;
+  }
+  .home .content p {
+    font-size: 12px;
+  }
+}
+@media (width < 960px) {
+  .home {
+    background-position: 50%;
+    height: 50vh;
+  }
+}
+
+.book {
+  background: #f9f9f9;
+  padding: 50px;
+}
+.book .main-text h1 {
+  text-align: center;
+  font-weight: 600;
+}
+.book .main-text h1 span {
+  color: #ffa500;
+}
+.book .card {
+  border-radius: 10px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+  border: none;
+}
+.book .row {
+  margin-top: 32px;
+}
+.book form input {
+  padding: 12px;
+  color: black;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 10px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+.book form textarea {
+  border: none;
+  border-radius: 10px;
+  resize: none;
+  height: 95px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+.book .submit {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600px;
+  background: #ffa500;
+  color: #f9f9f9;
+  transition: 0.5s;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+.book .submit:hover {
+  width: 180px;
+}
+@media (width < 768px) {
+  .book {
+    padding: 0;
+  }
+  .book .main-text h1 {
+    margin-top: 20px;
+  }
+  .book form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.packages .main-txt h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 600px;
+}
+.packages .main-txt h1 span {
+  color: #ffa500;
+}
+.packages .card {
+  border-radius: 20px;
+  border: none;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+.packages .card img {
+  border-radius: 20px;
+  height: 600px;
+}
+@media (width < 1200px) {
+  .packages .card img {
+    height: 400px;
+  }
+}
+@media (width < 992px) {
+  .packages .card img {
+    height: 250px;
+  }
+}
+@media (width < 768px) {
+  .packages .card img {
+    height: 600px;
+  }
+}
+@media (width < 450px) {
+  .packages .card img {
+    height: 400px;
+  }
+}
+.packages .card form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.packages .card-body {
+  background-color: transparent;
+}
+.packages .card-body h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.packages .card-body p {
+  font-size: 16px;
+}
+.packages .card-body .checked {
+  color: #ffa500;
+}
+.packages .card-body h6 {
+  font-size: 24px;
+}
+.packages .card-body a {
+  padding: 10px;
+  text-decoration: none;
+  background: #ffa500;
+  color: #f9f9f9;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.packages .star i {
+  font-size: 16px;
+}
+
+.services {
+  background: #f9f9f9;
+  margin-top: 50px;
+}
+.services .main-txt h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 600px;
+}
+.services .main-txt h1 span {
+  color: #ffa500;
+}
+.services .card {
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+  border: none;
+}
+.services .card i {
+  font-size: 80px;
+  text-align: center;
+  color: #ffa500;
+  margin-top: 20px;
+}
+.services .card .card-body {
+  text-align: center;
+}
+.services .card .card-body h3 {
+  font-weight: 600;
+}
+
+.gallery {
+  margin-top: 50px;
+}
+.gallery .main-txt h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 600px;
+}
+.gallery .main-txt h1 span {
+  color: #ffa500;
+}
+.gallery .card {
+  border-radius: 10px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+  cursor: pointer;
+}
+.gallery .card img {
+  height: 230px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.gallery .card img:hover {
+  transform: scale(1.1);
+}
+@media (width < 1200px) {
+  .gallery .card img {
+    height: 200px;
+  }
+}
+@media (width < 768px) {
+  .gallery .card img {
+    height: 230px;
+  }
+}
+
+.about {
+  padding: 50px;
+  margin-top: 50px;
+  background: #f9f9f9;
+}
+.about .main-txt h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 600px;
+}
+.about .main-txt h1 span {
+  color: #ffa500;
+}
+.about .card {
+  border-radius: 10px;
+  border: none;
+}
+.about .card img {
+  border-radius: 10px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+  border: none;
+}
+.about h2 {
+  font-weight: 600;
+}
+.about p {
+  font-weight: 500;
+}
+.about #about-btn {
+  width: 150px;
+  height: 38px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffa500;
+  color: #f9f9f9;
+  font-weight: 600;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.about #about-btn:hover {
+  width: 180px;
+}
+@media (width < 768px) {
+  .about {
+    padding: 0;
+  }
+}
+
+#footer {
+  width: 100%;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+#footer h1 {
+  font-weight: 600;
+  padding-top: 30px;
+  text-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+#footer h1 span {
+  color: #ffa500;
+}
+#footer .social-links i {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: black;
+  color: #f9f9f9;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+#footer .social-links i:hover {
+  background-color: #ffa500;
+}/*# sourceMappingURL=style.css.map */
